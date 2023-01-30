@@ -38,7 +38,7 @@ class Persona{
 
 class sueldo{
 
-
+#nominas;
 }
 class Administradores{
     
