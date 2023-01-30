@@ -25,3 +25,21 @@ class TrabajadoresAreas{
     
     }
 }
+
+class Persona{
+ 
+    nombre;
+    apellido;
+    edad;
+    #curp;
+    #rfc;
+
+}
+
+class sueldo{
+
+
+}
+class Administradores{
+    
+}
