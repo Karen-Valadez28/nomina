@@ -27,6 +27,22 @@ class Sueldo{
     }
 }
 
+class Banco{
+    ComprobanteDomicilio;
+    NumCuenta;
+    TipoBanco ;
+    Beneficiarios;
+
+    constructor(ComprobanteDomicilio, NumCuenta,TipoBanco,Beneficiarios){
+
+        this.ComprobanteDomicilio;
+        this.NumCuenta= NuC;
+        this.TipoBanco= TiB;
+        this.Beneficiarios= Ben;
+    }
+}
+
+
 class Retardos {
     horaEntrada;
     descuento;
@@ -72,19 +88,5 @@ class Faltas{
         this.FechaFalta= Fal;
         this.Motivo= Mo;
         this.Justificacion= Just;
-    }
-}
-class Banco{
-    ComprobanteDomicilio;
-    NumCuenta;
-    TipoBanco ;
-    Beneficiarios;
-
-    constructor(ComprobanteDomicilio, NumCuenta,TipoBanco,Beneficiarios){
-
-        this.ComprobanteDomicilio;
-        this.NumCuenta= NuC;
-        this.TipoBanco= TiB;
-        this.Beneficiarios= Ben;
     }
 }
