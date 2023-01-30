@@ -1,3 +1,32 @@
+class Persona{
+ 
+    nombre;
+    apellido;
+    edad;
+    #curp;
+    #rfc;
+    telefono;
+    correo;
+    #NSS;
+    constructor(){
+
+    }
+
+}
+
+class Sueldo{
+
+    HorasTrabajadas;
+    PeriodoPago;
+    SueldoxHora;
+    TiempoExtra;
+    Bonos;
+
+    constructor(){
+        
+    }
+}
+
 class Retardos {
     horaEntrada;
     descuento;
@@ -26,20 +55,9 @@ class TrabajadoresAreas{
     }
 }
 
-class Persona{
- 
-    nombre;
-    apellido;
-    edad;
-    #curp;
-    #rfc;
 
-}
 
-class sueldo{
 
-#nominas;
-}
 class Administradores{
     
 }
