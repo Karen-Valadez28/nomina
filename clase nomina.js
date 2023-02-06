@@ -8,10 +8,17 @@ class Persona{
     telefono;
     correo;
     #NSS;
-    constructor(){
-
+    constructor(name,apell,edad,curp,rfc,phone,correo,address){
+       this.nombre=name;
+       this.apellido=apell;
+       this.edad=edad;
+       this.curp=curp;
+       this.rfc=rfc;
+       this.telefono=phone;
+       this.correo=correo;
+       this.direccion=address;
     }
-
+/
 }
 
 class Sueldo{
@@ -22,8 +29,12 @@ class Sueldo{
     TiempoExtra;
     Bonos;
 
-    constructor(){
-        
+    constructor(HorasTra,PeriodPago,SueldoExt,Timextra,bonos){
+        this.HorasTrabajadas=HorasTra;
+        this.PeriodoPago=PeriodPago;
+        this.SueldoxHora=SueldoExt;
+        this.TiempoExtra=Timextra;
+        this.Bonos=bonos;
     }
 }
 
@@ -74,9 +85,7 @@ class TrabajadoresAreas{
 
 
 
-class Administradores{
-    
-}
+
 class Faltas{
     FechaFalta;
     Motivo;
