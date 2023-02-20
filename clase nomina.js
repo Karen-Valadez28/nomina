@@ -18,7 +18,7 @@ class Persona{
        this.correo=correo;
        this.direccion=address;
     }
-/
+
 }
 
 class Sueldo{
