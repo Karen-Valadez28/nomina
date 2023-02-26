@@ -2,31 +2,32 @@ class Persona{
  
     nombre;
     apellido;
-    edad;
+    f_nacimiento;
     #curp;
     #rfc;
     telefono;
     correo;
     #NSS;
-    constructor(name,apell,edad,curp,rfc,phone,correo,address){
+    constructor(name,apell,curp,rfc,phone,correo,address,f_nacimiento){
        this.nombre=name;
        this.apellido=apell;
-       this.edad=edad;
        this.curp=curp;
        this.rfc=rfc;
        this.telefono=phone;
        this.correo=correo;
        this.direccion=address;
+       this.f_nacimiento= f_nacimiento;
     }
     cambiarTelefono = function(nuevoTel){
-        this.telefono = nuevoTel; 
+        return this.telefono = nuevoTel; 
     }
 
-    actualizarEdad = function(){
-         var nuevaedad = 2023 - this.edad;
+    ObtenerEdad = function(){
+         var nuevaedad = 2023 - this.f_nacimiento;
+         return nuevaedad;
     }
     cambiarcorreo = function(nuecorreo){
-        this.correo = nuecorreo;
+       return  this.correo = nuecorreo;
     }
     visualizarNSS = function (){
         return  `El NSS del la persona es: ${ this.#NSS } `;
@@ -35,11 +36,22 @@ class Persona{
         return `${this.nombre} ${this.apellido}`;
     }
     
+    obtenerCURP() {
+        return this.#curp;
+    }
+    obtenerRFC() {
+        return this.#rfc;
+    }
+
+    obtenerNSS() {
+        return this.#NSS;
+    }
+
     imprimirInformacionPersonal() {
-        console.log(`Nombre completo: ${this.getNombreCompleto()}`);
-        console.log(`Edad: ${this.getEdad()}`);
-        console.log(`Teléfono: ${this.getTelefono()}`);
-        console.log(`Correo electrónico: ${this.getCorreo()}`);
+        return `Nombre completo: ${this.getNombreCompleto()}`
+        ,`Edad: ${this.getEdad()}`
+        ,`Teléfono: ${this.getTelefono()}`
+        ,`Correo electrónico: ${this.getCorreo()}`;
     }
  
 }

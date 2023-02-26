@@ -84,8 +84,6 @@ class TrabajadoresAreas{
 
 
 
-
-
 class Faltas{
     FechaFalta;
     Motivo;
@@ -99,3 +97,12 @@ class Faltas{
         this.Justificacion= Just;
     }
 }
+
+imprimirInformacionLaboral() 
+    return `Puesto: ${this.getPuesto()}`
+      ,`Experiencia: ${this.getExperiencia()}`
+      ,`Antigüedad: ${this.getAntiguedad()}`
+      ,`Profesión: ${this.getProfesion()}`
+       ,`Periodo de contrato: ${this.getPeriodoContrato()}`
+       ,`Horario: ${this.getHorario()}`;
+

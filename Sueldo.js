@@ -6,11 +6,13 @@ class Sueldo{
     TiempoExtra;
     Bonos;
     pagoporhora;
+    porcentaje;
 
-    constructor(HorasTra, pagporho,sueldoxhora){
+    constructor(HorasTra, pagporho,sueldoxhora,porcentaje){
         this.HorasTrabajadas = HorasTra;
         this.pagoporhora = pagporho;
-        this.sueldoxhora=sueldoxhora
+        this.sueldoxhora=sueldoxhora;
+        this.porcentaje=porcentaje;
 
     }
 
@@ -27,12 +29,22 @@ class Sueldo{
     actualizarSueldoxHora(nuevoSueldo) {
         this.SueldoxHora = nuevoSueldo;
     }
+/**
+ * 
+ * @param {int} Porcentaje
+ */
+    ActualizarSueldoPorPorcentaje(Porcentaje){
+        let nuevosueldo= this.sueldoxhora *(porcentaje/100)
+        this.sueldoxhora+=nuevosueldo;
+
+    }
+
     imprimirInformacionPago() {
-        console.log(`Sueldo por hora: ${this.SueldoxHora}`);
-        console.log(`Horas trabajadas: ${this.HorasTrabajadas}`);
-        console.log(`Tiempo extra: ${this.TiempoExtra}`);
-        console.log(`Bonos: ${this.Bonos}`);
-        console.log(`Sueldo base: ${this.calcularSueldoBase()}`);
-        console.log(`Sueldo total: ${this.calcularSueldoTotal()}`);
+        return `Sueldo por hora: ${this.SueldoxHora}`
+        ,`Horas trabajadas: ${this.HorasTrabajadas}`
+        ,`Tiempo extra: ${this.TiempoExtra}`
+        ,`Bonos: ${this.Bonos}`
+        ,`Sueldo base: ${this.calcularSueldoBase()}`
+        ,`Sueldo total: ${this.calcularSueldoTotal()}`;
     }
 }
