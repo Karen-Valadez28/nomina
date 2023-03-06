@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container col 6">
+        
+    </div>
+    <main class="container col-4 mx-auto"> <!--contener a otros elementos-->
+        <header class="my-2">  <!--dar un margen en el eje-->
+            <div class="alert alert-danger" role="alert">
+                Ingrese en los espacios asignados sus horas trabajadas y el precio por hora!
+              </div>
+              
+            <h1> SUELDO DE TRABAJADORES</h1>
+           
+                <div class="form-group my-4">
+                    <label>Horas Trabajadas</label> 
+                    <input type="number" class="form-control" id="horas_trabaja"/><!--crear controles interactivos-->
+                    </label>
+                </div>
+                <div class="form-group my-4"><!-- agrupar los elementos dentro de una forma y los otros elementos aparezcan debajo. -->
+                    <label> Precio por hora </label>
+                    <input type="number" class="form-control" id="precio_hora"/>
+                    <button class="btn btn-success my-3" id="calcular" onclick="calsueldo()">Calcular</button><!--sucess es el color, si quiero cambiar color cambio solo eso-->
+                </div>
+                <p id="resultado"></p>
+
+                <div class="col-md-6">
+
+        
+                    
+                </div>
+            
+        </header>
+    </main>
+    <script src="Sueldo.js"></script>
+    <script src="Empleado.js"></script>
+    <script src="main.js"></script>
+<script>
+    var datos = Tool.getDatFromLocalStorage('Empleado')
+    for (let i = 0; i < datos.length; i++) {
+    
+         var e1 = new Empleado(datos[i].nombre, datos[i].telef, datos[i].direccion);
+         
+         empleados.push(e1);
+    }
+    </script>
+    
+    
+</body>
+</html>
