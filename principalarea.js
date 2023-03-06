@@ -15,10 +15,11 @@ function guardarArea() {
 
 
 function calcularvacantes(){
-    let empleados = document.getElementById('empleados').value;
-    let desempelados = document.getElementById('desempleados').value; 
+    let totemplarea = document.getElementById('empleados').value;
+    let empelados = document.getElementById('desempleados').value; 
 
-    let vacante = new Area(empleados, desempelados);
+    let vacante = new Area("Hola",totemplarea, empelados);
+     console.log(vacante);
 
     let resulvacantes = document.getElementById("resultado");
     resulvacantes.innerHTML = `El numero de vacantes es ${vacante.vacantes()}`;

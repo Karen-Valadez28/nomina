@@ -1,14 +1,15 @@
 class Area{
     /**para vacantes */
+    Nemplarea;
     Nempleadosact;
-    Ndesempleados;
+    
     /**para el area */
     Nombrearea ;
     
-    constructor(NA, NE, ND){
+    constructor(NA, NE, NEA){
         this.Nombrearea = NA;
         this.Nempleadosact = NE;
-        this.Ndesempleados = ND;
+        this.Nemplarea = NEA;
     }
     
     agregarArea = function(area){
@@ -17,7 +18,7 @@ class Area{
     }
 
      vacantes = function(){
-        var vacante = this.Nempleadosact - this.Ndesempleados;
+        var vacante = parseInt(this.Nemplarea) - parseInt(this.Nempleadosact);
         return vacante;
      }
 
