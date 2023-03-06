@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Datos bancarios</h1>
+    
+        <div class="container">
+          <div class="row justify-content-center mt 3">
+            <label class="col-1 form-label">Nombre del empleado</label>
+            <div class="col-2 col-6 col-md-4"><br>
+              <input type="text" class=" form-control" id="Nombre">
+            </div>
+          </div>
+        </div>
+    
+        <div class="row justify-content-center mt 3">
+          <label class="col-1 form-label">Numero de cuenta</label>
+          <div class="col-3 col-8 col-md-4"><br>
+            <input type="number" class=" form-control" id="NuC">
+          </div>
+        </div>
+    
+    
+    
+        <div class="row justify-content-center mt 3">
+          <label class="col-1 form-label">Banco</label>
+          <div class="col-3 col-8 col-md-4"><br>
+            <input type="text" class=" form-control" id="TiB">
+          </div>
+    
+          <div class="row justify-content-center mt 3">
+            <label class="col-1 form-label">Beneficiario</label>
+            <div class="col-3 col-8 col-md-4"><br>
+              <input type="text" class="form-control" id="Ben">
+            </div>
+    
+            <div class="row justify-content-center mt 3">
+              <div class="col-3 col-8 col-md-4"><br>
+                <button class="btn btn-outline-warning" onclick="myFunctionBan()">Guardar</button>
+              </div>
+    
+    
+    
+              <script >function myFunctionBan() {
+                 
+                var persona=Tool.findPersonaB(document.getElementById("Nombre").value);
+                  console.log(persona);
+              if(persona){
+                var save =getDataFormBanco();
+                Tool.updatePersonaB(document.getElementById("Nombre").value,save);
+    
+              }
+              else{ alert("No se encontro la Persona para el registro de sus datos")
+    
+              }
+    
+    
+              }
+            </script>
+              <script src="main.js"></script>
+              <script src="Tool.js"></script>
+              <script src="Faltas.js"></script>
+              <script src="Banco.js"></script>
+              
+</body>
+</html>
