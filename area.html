@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREAS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/logonom.jpg" alt="Logo" class="img-fluid ms-auto" width="60" >
+          </a>
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Empleado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sueldo.html">Sueldo </a>
+              <li class="nav-item">
+                <a class="nav-link" href="cita.html">Agendar Citas </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</head>
+
+<body>
+    
+    <div class="container col 6">
+        
+    </div>
+    
+    <main class="container col-4 mx-auto"> <!--contener a otros elementos y contener en el centro-->
+            <header class="my-2">  <!--dar un margen en el eje-->
+                    <div class="alert alert-danger" role="alert"><!--alerta en la parte superior-->
+                        Llene los espacios!
+                    </div>
+
+        <h1>AREA</h1>
+        <div class="form-group my-4">
+                <label for="Nombrearea">Nombre del area</label>
+                <input class="form-control" name="Nombrearea" id="Nombrearea" placeholder="Ingresa area(s)">
+            <button class="btn btn-secondary" onclick="guardarArea()">Guardar</button>
+        </div>
+       
+
+        <h1>VACANTES</h1>
+            <br>
+
+            <div class="form-group my-4">
+                <label>Numero de empleados actual</label> 
+                <input type="number" class="form-control" id="empleados"/><!--crear controles interactivos id empelados relacionado con funcion en js-->
+                </label>
+            </div>
+
+            <div class="form-group my-4">
+                <label>Numero de desempleados que hubo</label> 
+                <input type="number" class="form-control" id="desempleados"/><!--crear controles interactivos id empelados relacionado con funcion en js-->
+                <button class="btn btn-success my-3" id="" onclick="calcularvacantes()">Calcular</button><!--porque sale NaNy donde esta id js-->
+            </div>
+
+            <p id="resultado"></p>
+            <div class="col-md-6">            
+            </div>
+
+        </header>
+    </main>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+     <script src="claseArea.js"></script>
+     <script src="principalarea.js"></script>
+
+     <!--
+        falta crear localstorage
+        <script>
+        var datos = Tool.getDatFromLocalStorage('claseArea')
+        for (let i = 0; i < datos.length; i++) {
+        
+             var e1 = new Area(datos[i].nombre, datos[i].telef, datos[i].direccion);
+             
+             empleados.push(e1);
+        }
+        </script>-->
+     
+      
+
+</body>
+
+</html>
