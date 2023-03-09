@@ -1,7 +1,7 @@
 class Banco {
-    NumCuenta; // Número de cuenta bancaria
-    TipoBanco; // Tipo de banco
-    Beneficiarios; // Lista de beneficiarios asociados a la cuenta
+    NumCuenta; 
+    TipoBanco; 
+    Beneficiarios; 
 
     /**
      * Constructor de la clase Banco
